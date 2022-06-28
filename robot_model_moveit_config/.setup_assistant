@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robot_model
+    relative_path: urdf/robot_model.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/robot_model.srdf
+  CONFIG:
+    author_name: blackbird
+    author_email: blackbird@todo.de
+    generated_timestamp: 1653953018

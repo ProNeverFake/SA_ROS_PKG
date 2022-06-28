@@ -1,0 +1,581 @@
+<?xml version="1.0" ?>
+<robot name="robot_model">
+
+	<link name = "base_link">
+		<!-- <visual>
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<cylinder length="0.01" radius="0.2"/>
+			</geometry>
+		</visual>  -->
+	</link>
+
+	<joint name = "joint_0" type = "fixed">
+
+		<parent link = "base_link"/>
+		<child link = "link_0_x"/>
+		<origin rpy="0 0 0" xyz="0 0 0"/>
+
+	</joint>
+
+
+	<!-- =================================================================================== -->
+	<!-- | Link 0 and joint 1 | -->
+	<!-- =================================================================================== -->
+	<link name = "link_0_x">
+		
+		<visual name = "mesh_0_x">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<mesh filename = "package://robot_model/mesh/L0.obj" scale = "1 1 1"/>
+			</geometry>
+			<material name = "l0_mtr">
+				<texture filename = "package://robot_model/mesh/texture/L0.png"/>
+
+			</material>
+		</visual> 
+	</link>
+
+	<joint name = "joint_1_x" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_0_x"/>
+		<child link="link_0_y"/>
+		<origin xyz = "0.0000 0.0000 0.2500" rpy = "0.0000 0.0000 0.0000"/>
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<link name = "link_0_y">
+	<!-- dummy link does not need any attr. -->
+		<!-- <visual name = "mesh_0_y">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+		<visual>
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<cylinder length="0" radius="0"/>
+			</geometry>
+		</visual> 
+	</link>
+
+	<joint name = "joint_1_y" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_0_y"/>
+		<child link="link_0_z"/>
+		<origin xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<link name = "link_0_z">
+	<!-- dummy link does not need any attr. -->
+		<!-- <visual name = "mesh_0_z">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+	</link>
+
+	<joint name = "joint_1_z" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_0_z"/>
+		<child link="link_1_x"/>
+		<origin xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<axis xyz="0 0 1" />
+	</joint>
+
+	<!-- =================================================================================== -->
+	<!-- | Link 1 and joint 2 | -->
+	<!-- =================================================================================== -->
+	<link name = "link_1_x">
+		<inertial>
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<mass value = "110.000"/>
+			<inertia ixx = "3.236370867" ixy = "0.644464939" ixz = "0.468238095" iyy = "6.714710678" iyz = "0.257842574" izz = "5.649849463"/>
+		</inertial>		
+		<visual name = "mesh_1_x">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<mesh filename = "package://robot_model/mesh/L1.obj" scale = "1 1 1"/>
+				
+			</geometry>
+			<material name = "l1_mtr">
+				<texture filename = "package://robot_model/mesh/texture/L1.png"/>
+				
+			</material>
+		</visual> 
+	</link>
+
+	<joint name = "joint_2_x" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_1_x"/>
+		<child link="link_1_y"/>
+		<origin xyz = "0.3500 0.0000 0.4250" rpy = "0.0000 -1.5708 1.5708"/>
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<link name = "link_1_y">
+	<!-- dummy link does not need any attr. -->
+		<!-- <visual name = "mesh_1_y">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+	</link>
+
+	<joint name = "joint_2_y" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_1_y"/>
+		<child link="link_1_z"/>
+		<origin xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<link name = "link_1_z">
+	<!-- dummy link does not need any attr. -->
+		<!-- <visual name = "mesh_1_z">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+	</link>
+
+	<joint name = "joint_2_z" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_1_z"/>
+		<child link="link_2_x"/>
+		<origin xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<axis xyz="0 0 1" />
+	</joint>
+
+	<!-- =================================================================================== -->
+	<!-- | Link 2 and joint 3 | -->
+	<!-- =================================================================================== -->
+
+	
+	<link name = "link_2_x">
+		<inertial>
+			<mass value = "239.748" xyz = " 0.427436 0.002950  0.236273"/>
+			<inertia ixx = "4.30639745" ixy = "0.165463221" ixz = "4.341148242" iyy = "40.01608253" iyz = "0.022575289" izz = "39.50583604"/>
+		</inertial>
+		
+		<visual name = "mesh_2_x">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<!-- <mesh filename = "L2.obj" scale = "1.0"/> -->
+				<mesh filename = "package://robot_model/mesh/L2.dae"/>
+			</geometry>
+			<material name = "l2_mtr">
+				<texture filename = "package://robot_model/mesh/texture/L2.png"/>
+				
+			</material>
+		</visual> 
+	</link>
+
+	<joint name = "joint_3_x" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_2_x"/>
+		<child link="link_2_y"/>
+		<origin xyz = "1.1500 0.0000 0.0000" rpy = "0.0000 0.0000 -3.14159"/>
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<link name = "link_2_y">
+	<!-- dummy link does not need any attr. -->
+		<!-- <visual name = "mesh_2_y">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+	</link>
+
+	<joint name = "joint_3_y" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_2_y"/>
+		<child link="link_2_z"/>
+		<origin xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<link name = "link_2_z">
+	<!-- dummy link does not need any attr. -->
+		<!-- <visual name = "mesh_2_z">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+	</link>
+
+	<joint name = "joint_3_z" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_2_z"/>
+		<child link="link_3_x"/>
+		<origin xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<axis xyz="0 0 1" />
+	</joint>
+
+	<!-- =================================================================================== -->
+	<!-- | Link 3 and joint 4 | -->
+	<!-- =================================================================================== -->
+
+	<link name = "link_3_x">
+		<inertial>
+			<mass value = "164.006" xyz = " 0.023521 0.157165  0.000000"/>
+			<inertia ixx = "16.43037097" ixy = "0.336896677" ixz = "0.018073572" iyy = "2.381578838" iyz = "0.191901642" izz = "16.17115993"/>
+		</inertial>
+		
+		<visual name = "mesh_3_z">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<!-- <mesh filename = "L3.obj" scale = "1.0"/> -->
+				<mesh filename = "package://robot_model/mesh/L3.obj"/>
+			</geometry>
+			<material name = "l3_mtr">
+				<texture filename = "package://robot_model/mesh/texture/L3.png"/>
+				
+			</material>
+		</visual> 
+	</link>
+
+	<joint name = "joint_4_x" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_3_x"/>
+		<child link="link_3_y"/>
+		<origin xyz = "0.0410 0.7545 0.0000" rpy = "-1.5708 0.0000 0.0000"/>
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<link name = "link_3_y">
+	<!-- dummy link does not need any attr. -->
+		<!-- <visual name = "mesh_3_y">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+	</link>
+
+	<joint name = "joint_4_y" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_3_y"/>
+		<child link="link_3_z"/>
+		<origin xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<link name = "link_3_z">
+	<!-- dummy link does not need any attr. -->
+		<!-- <visual name = "mesh_3_z">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+	</link>
+
+	<joint name = "joint_4_z" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_3_z"/>
+		<child link="link_4_x"/>
+		<origin xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<axis xyz="0 0 1" />
+	</joint>
+
+	<!-- =================================================================================== -->
+	<!-- | Link 4 and joint 5 | -->
+	<!-- =================================================================================== -->
+	<link name = "link_4_x">
+		<inertial>
+			<mass value = " 39.746" xyz = " 0.000000 0.001354 0.223432"/>
+			<inertia ixx = "0.419700279" ixy = "0" ixz = "0" iyy = "0.425200882" iyz = "0.009137089" izz = "0.097243405"/>
+		</inertial>	
+		<visual name = "mesh_4_x">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<!-- <mesh filename = "L4.obj" scale = "1.0"/> -->
+				<mesh filename = "package://robot_model/mesh/L4.obj"/>
+			</geometry>
+			<material name = "l4_mtr">
+				<texture filename = "package://robot_model/mesh/texture/L4.png"/>
+		
+			</material>
+		</visual> 
+	</link>
+
+	<joint name = "joint_5_x" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_4_x"/>
+		<child link="link_4_y"/>
+		<origin xyz = "0.0000 0.0000 0.245500" rpy = "1.5708 0.0000 0.0000"/>
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<link name = "link_4_y">
+	<!-- dummy link does not need any attr. -->
+		<!-- <visual name = "mesh_4_y">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+	</link>
+
+	<joint name = "joint_5_y" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_4_y"/>
+		<child link="link_4_z"/>
+		<origin xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<link name = "link_4_z">
+	<!-- dummy link does not need any attr. -->
+		<!-- <visual name = "mesh_4_z">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+	</link>
+
+	<joint name = "joint_5_z" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_4_z"/>
+		<child link="link_5_x"/>
+		<origin xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<axis xyz="0 0 1" />
+	</joint>
+
+	<!-- =================================================================================== -->
+	<!-- | Link 5 and joint 6 | -->
+	<!-- =================================================================================== -->
+
+	<link name = "link_5_x">
+		<inertial>
+			<mass value = " 28.510" xyz = " 0.000000 0.054123 -0.037621"/>
+			<inertia ixx = "0.436341228" ixy = "0.000008171" ixz = "0.000000068" iyy = "0.296286531" iyz = "0.06785905" izz = "0.294686677"/>
+		</inertial>
+		<visual name = "mesh_5_x">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<!-- <mesh filename = "L5.obj" scale = "1.0"/> -->
+				<mesh filename = "package://robot_model/mesh/L5.obj"/>
+			</geometry>
+			<material name = "l5_mtr">
+				<texture filename = "package://robot_model/mesh/texture/L5.png"/>
+				
+			</material>
+		</visual> 
+	</link>
+
+	<joint name = "joint_6_x" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_5_x"/>
+		<child link="link_5_y"/>
+		<origin xyz = "0.0000 0.2400 0.0000" rpy = "-1.5708 0.0000 0.0000"/>
+		<axis xyz="1 0 0" />
+	</joint>
+
+	<link name = "link_5_y">
+	<!-- dummy link does not need any attr. -->
+		<!-- <visual name = "mesh_5_y">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+	</link>
+
+	<joint name = "joint_6_y" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_5_y"/>
+		<child link="link_5_z"/>
+		<origin xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<axis xyz="0 1 0" />
+	</joint>
+
+	<link name = "link_5_z">
+	<!-- dummy link does not need any attr. -->
+		<!-- <visual name = "mesh_5_z">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+	</link>
+
+	<joint name = "joint_6_z" type = "continuous">
+		<!-- <movement type = "rotational" rigidity = "flexible"/> -->
+		<parent link="link_5_z"/>
+		<child link="link_6_x"/>
+		<origin xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<axis xyz="0 0 1" />
+	</joint>
+
+	<!-- =================================================================================== -->
+	<!-- | Link 6 | -->
+	<!-- =================================================================================== -->
+	
+	<link name = "link_6_x">
+		<inertial>
+			<mass value = " 78.622" xyz = "-0.065895 0.000000  0.122766"/>
+			<inertia ixx = "0.766497" ixy = "0" ixz = "0.01855" iyy = "1.401573" iyz = "0" izz = "1.295152"/>
+		</inertial>
+		
+		<visual name = "mesh_6">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<!-- <mesh filename = "L6Spindle.obj" scale = "1.0"/> -->
+				<mesh filename = "package://robot_model/mesh/L6Spindle.obj"/>
+			</geometry>
+			<material name = "l6_mtr">
+				<texture filename = "package://robot_model/mesh/texture/L6Spindle.png"/>
+			</material>
+		</visual> 
+	</link>
+		
+	
+	
+	<!-- <cosy name = "TCP">
+		<parent link="link_6"/>
+		<T_parent_cosy xyz = "0.1705 0.0000 0.1165" rpy = "0.0000 -1.5708 0.0000"/>
+	</cosy> -->
+	
+</robot>
+
+	<!-- =================================================================================== -->
+	<!-- | original file backup | -->
+	<!-- =================================================================================== -->
+	<!-- | "joint1" backup, now it is joint 0 | -->
+	<!-- <joint name = "joint_1" type = "continuous">
+		<movement type = "rotational" rigidity = "flexible"/>
+		<parent link="link_0"/>
+		<child link="link_1"/>
+		<origin xyz = "0.0000 0.0000 0.2500" rpy = "0.0000 0.0000 0.0000"/>
+		
+		<T_parent_joint xyz = "0.0000 0.0000 0.2500" rpy = "0.0000 0.0000 0.0000"/>
+		<T_child_joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<position min = "-3.2289" max = "3.2289" offset = "0.0" home = "0.0"/>
+		<veclocity min = "-1.8326" max = "1.8326"/>
+		<acceleration min = "-4.3633" max = "4.3633"/>
+		<jerk max = "189.338"/>
+		<gear numerator = "-1798" denominator = "7" backlash = "0.0017"/>
+		<motor max = "55.0" inertia = "874.1766" nu = "0.89"/>
+		<torque max = "22080.0000"/>
+		<stiffness xyz = "inf inf inf" rpy = "12395720.9971118 13033731.2965956 7446570.85412168 "/> 
+		<dampingOld xyz = "15020 15020 15020" rpy = "15020 15020 15020"/>
+		
+		
+		<backlashOld value = "0.0017"/>
+		<backlash value = "0.00003"/>
+		
+		<dynamics>
+			<friction value = "1.2"/>
+			<damping xyz = "262 262 262" rpy = "262 262 262"/>
+		</dynamics>
+	</joint> -->
+
+	<!-- <joint name = "joint_2" type = "continuous">
+		<movement type = "rotational" rigidity = "flexible"/>
+		<parent link="link_1"/>
+		<child link="link_2"/>
+		<origin xyz = "0.3500 0.0000 0.4250" rpy = "0.0000 -1.5708 1.5708"/>
+		<T_parent_joint xyz = "0.3500 0.0000 0.4250" rpy = "0.0000 -1.5708 1.5708"/>
+		<T_child_joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<position min =  "0.0873" max = "2.4435" offset = "1.5708" home = "-1.5708"/>
+		<veclocity min = "-1.8675" max = "1.8675"/>
+		<acceleration min = "-4.3633" max = "4.3633"/>
+		<jerk max = "155.671"/>
+		<gear numerator = "-2782" denominator = "11" backlash = "0.0026"/>
+		<motor max = "55.0" inertia = "658.1154" nu = "0.89"/>
+		<torque max = "22080.0000"/>
+		<stiffness xyz = "inf inf inf" rpy = "38157744.1141680 6593696.42621654 5062265.87020350"/> 
+		<dampingOld xyz = "15020 15020 15020" rpy = "15020 15020 15020"/>
+		
+		
+		<backlashOld value = "0.0016"/>
+		<backlash value = "0.00003"/>
+
+		<dynamics>
+			<friction value= "1.2"/>
+			<damping xyz = "262 262 262" rpy = "262 262 262"/>
+		</dynamics>
+	</joint> -->
+
+	<!-- <joint name = "joint_3" type = "continuous">
+		<movement type = "rotational" rigidity = "flexible"/>
+		<parent link="link_2"/>
+		<child link="link_3"/>
+		<origin xyz = "1.1500 0.0000 0.0000" rpy = "0.0000 0.0000 -3.14159"/>
+		<T_parent_joint xyz = "1.1500 0.0000 0.0000" rpy = "0.0000 0.0000 -3.14159"/>
+		<T_child_joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<position min = "-2.7052" max = "2.0944" offset = "-1.5708" home = "1.5708"/>
+		<veclocity min = "-1.9897" max = "1.9897"/>
+		<acceleration min = "-4.3633" max = "4.3633"/>
+		<jerk max = "194.329"/>
+		<gear numerator = "-4491" denominator = "19" backlash = "0.0017"/>
+		<motor max = "55.0" inertia = "559.9853" nu = "0.89"/>
+		<torque max = "15724.5586"/>
+		<stiffness xyz = "inf inf inf" rpy = "2552843.86806903 2256419.51351595 3807203.22850834"/> 
+		<dampingOld xyz = "15020 15020 15020" rpy = "15020 15020 15020"/>
+		
+		
+		<backlashOld value = "0.0017"/>
+		<backlash value = "0.00003"/>
+
+		<dynamics>
+			<friction value= "1.2"/>
+			<damping xyz = "262 262 262" rpy = "262 262 262"/>
+		</dynamics>
+	</joint> -->
+
+	<!-- <joint name = "joint_4" type = "continuous">
+		<movement type = "rotational" rigidity = "flexible"/>
+		<parent link="link_3"/>
+		<child link="link_4"/>
+		<origin xyz = "0.0410 0.7545 0.0000" rpy = "-1.5708 0.0000 0.0000"/>
+		
+		<T_parent_joint xyz = "0.0410 0.7545 0.0000" rpy = "-1.5708 0.0000 0.0000"/>
+		<T_child_joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<position min = "-6.1086" max = "6.1086" offset = "0.0" home = "0.0"/>
+		<veclocity min = "-2.3736" max = "2.3736"/>
+		<acceleration min = "-4.3633" max = "4.3633"/>
+		<jerk max = "319.747"/>
+		<gear numerator = "-1989" denominator = "10" backlash = "0.0028"/>
+		<motor max = "18.0" inertia = "93.73926" nu = "0.89"/>
+		<torque max =  "4923.5498"/>
+		<stiffness xyz = "inf inf inf" rpy = "3390060.34307411 2584112.87405034 3966207.90861857"/> 
+		<dampingOld xyz = "3000 3000 3000" rpy = "3000 3000 3000"/>
+		
+		
+		<backlashOld value = "0.001"/>
+		<backlash value = "0.0000175"/>
+
+		<dynamics>
+			<friction value= "1.2"/>
+			<damping xyz = "520 520 520" rpy = "520 520 520"/>
+		</dynamics>
+	</joint> -->
+
+	<!-- <joint name = "joint_5" type = "continuous">
+		<movement type = "rotational" rigidity = "flexible"/>
+		<parent link="link_4"/>
+		<child link="link_5"/>
+		<origin xyz = "0.0000 0.0000 0.245500" rpy = "1.5708 0.0000 0.0000"/>
+		<T_parent_joint xyz = "0.0000 0.0000 0.245500" rpy = "1.5708 0.0000 0.0000"/>
+		<T_child_joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<position min = "-2.1380" max = "2.1380" offset = "0.0" home = "0.0"/>
+		<veclocity min = "-2.2515" max = "2.2515"/>
+		<acceleration min = "-4.3633" max = "4.3633"/>
+		<jerk max = "303.320"/>
+		<gear numerator = "-629" denominator = "3" backlash = "0.0024"/>
+		<motor max = "18.0" inertia = "113.7964" nu = "0.89"/>
+		<torque max =  "4923.5498"/>
+		<stiffness xyz = "inf inf inf" rpy = "1732952.08387488 1733613.02290103 1316291.74290190"/> 
+		<dampingOld xyz = "3000 3000 3000" rpy = "3000 3000 3000"/>
+		
+		
+		<backlashOld value = "0.001"/>
+		<backlash value = "0.0000175"/>
+
+		<dynamics>
+			<friction value= "1.2"/>
+			<damping xyz = "520 520 520" rpy = "520 520 520"/>
+		</dynamics>
+	</joint> -->
+
+	<!-- <joint name = "joint_6" type = "continuous">
+		<movement type = "rotational" rigidity = "flexible"/>
+		<parent link="link_5"/>
+		<child link="link_6"/>
+		<origin xyz = "0.0000 0.2400 0.0000" rpy = "-1.5708 0.0000 0.0000"/>
+		<T_parent_joint xyz = "0.0000 0.2400 0.0000" rpy = "-1.5708 0.0000 0.0000"/>
+		<T_child_joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<position min = "-6.1086" max = "6.1086" offset = "0.0" home = "0.0"/>
+		<veclocity min = "-3.5954" max = "3.5954"/>
+		<acceleration min = "-4.3633" max = "4.3633"/>
+		<jerk max = "315.185"/>
+		<gear numerator = "-175743" denominator = "1340" backlash = "0.0017"/>
+		<motor max = "18.0" inertia = "45.11652" nu = "0.89"/>
+		<torque max =  "2881.5835"/>
+		<stiffness xyz = "inf inf inf" rpy = "568504.832291074 1588537.11616972 636861.546299834"/> 
+		<dampingOld xyz = "3000 3000 3000" rpy = "3000 3000 3000"/>
+		
+		<backlashOld value = "0.0005"/>
+		<backlash value = "0.00000873"/>
+
+		<dynamics>
+			<friction value= "1.2"/>
+			<damping xyz = "520 520 520" rpy = "520 520 520"/>
+		</dynamics>
+	</joint> -->

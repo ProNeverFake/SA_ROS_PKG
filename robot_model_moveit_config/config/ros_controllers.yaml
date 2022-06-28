@@ -1,0 +1,40 @@
+robot_model_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - joint_1_z
+    - joint_2_z
+    - joint_3_z
+    - joint_4_z
+    - joint_5_z
+    - joint_6_z
+  gains:
+    joint_1_z:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_2_z:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_3_z:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_4_z:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_5_z:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_6_z:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

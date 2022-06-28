@@ -1,0 +1,676 @@
+<?xml version="1.0" ?>
+<robot name="robot_model_gazebo_test">
+    <link name="world" />
+    <joint name="world_to_base_joint" type="fixed">
+        <parent link="world" />
+        <child link="base_link" />
+    </joint>
+    <link name="base_link" />
+    <joint name="joint_0" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <parent link="base_link" />
+        <child link="link_0_x" />
+    </joint>
+    <!-- =================================================================================== -->
+    <!-- | Link 0 and joint 1 | -->
+    <!-- =================================================================================== -->
+    <link name="link_0_x">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <!-- <mass value="0.000" xyz=" 0.0026 0.0187 0.1880" /> -->
+            <!-- <mass value="110.000" xyz=" 0.0026 0.0187 0.1880" /> -->
+            <mass value="110.000" xyz=" 0.0026 0.0187 0.1880" />
+            <!-- <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" /> -->
+            <inertia ixx="3.23" ixy="0.6444" ixz="0.4682" iyy="6.714" iyz="0.2578" izz="5.6498" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <geometry>
+                <mesh filename="package://robot_model/mesh/L0.obj" scale="1 1 1" />
+            </geometry>
+            <material name="White">
+                <color rgba="1.0 1.0 1.0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_model/mesh/L0.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint_1_x" type="continuous">
+        <parent link="link_0_x" />
+        <child link="link_0_y" />
+        <origin xyz="0.0000 0.0000 0.2500" rpy="0.0000 0.0000 0.0000" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="link_0_y">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="0.001" xyz="0 0 0" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </collision>
+    </link>
+    <joint name="joint_1_y" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_0_y" />
+        <child link="link_0_z" />
+        <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="link_0_z">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="0.001" xyz="0 0 0" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </collision>
+    </link>
+    <joint name="joint_1_z" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_0_z" />
+        <child link="link_1_x" />
+        <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <!-- =================================================================================== -->
+    <!-- | Link 1 and joint 2 | -->
+    <!-- =================================================================================== -->
+    <link name="link_1_x">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="110.000" xyz=" 0.002646 0.018740 0.188026" />
+            <inertia ixx="3.236370867" ixy="0.644464939" ixz="0.468238095" iyy="6.714710678" iyz="0.257842574" izz="5.649849463" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <geometry>
+                <mesh filename="package://robot_model/mesh/L1.obj" scale="1 1 1" />
+            </geometry>
+            <!-- <material name="Red">
+				<color rgba="1.0 0.0 0.0 0.0" />
+			</material> -->
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_model/mesh/L1.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint_2_x" type="continuous">
+        <parent link="link_1_x" />
+        <child link="link_1_y" />
+        <origin xyz="0.3500 0.0000 0.4250" rpy="0.0000 -1.5708 1.5708" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="link_1_y">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="0.001" xyz=" 0 0 0" />
+            <inertia ixx="0.000" ixy="0" ixz="0" iyy="0.000" iyz="0" izz="0.000" />
+        </inertial>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </collision>
+    </link>
+    <joint name="joint_2_y" type="continuous">
+        <parent link="link_1_y" />
+        <child link="link_1_z" />
+        <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="link_1_z">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="0.001" xyz=" 0 0 0" />
+            <inertia ixx="0.000" ixy="0" ixz="0" iyy="0.000" iyz="0" izz="0.000" />
+        </inertial>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </collision>
+    </link>
+    <joint name="joint_2_z" type="continuous">
+        <parent link="link_1_z" />
+        <child link="link_2_x" />
+        <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <!-- =================================================================================== -->
+    <!-- | Link 2 and joint 3 | -->
+    <!-- =================================================================================== -->
+    <link name="link_2_x">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="239.748" xyz=" 0.4274 0.0029  0.2362" />
+            <inertia ixx="4.30639745" ixy="0.165463221" ixz="4.341148242" iyy="40.01608253" iyz="0.022575289" izz="39.50583604" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <geometry>
+                <mesh filename="package://robot_model/mesh/L2.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_model/mesh/L2.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint_3_x" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_2_x" />
+        <child link="link_2_y" />
+        <origin xyz="1.1500 0.0000 0.0000" rpy="0.0000 0.0000 -3.14159" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="link_2_y">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="0.001" xyz=" 0 0 0" />
+            <inertia ixx="0.000" ixy="0" ixz="0" iyy="0.000" iyz="0" izz="0.000" />
+        </inertial>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </collision>
+        <!-- dummy link does not need any attr. -->
+        <!-- <visual name = "mesh_2_y">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+    </link>
+    <joint name="joint_3_y" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_2_y" />
+        <child link="link_2_z" />
+        <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="link_2_z">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="0.001" xyz=" 0 0 0" />
+            <inertia ixx="0.000" ixy="0" ixz="0" iyy="0.000" iyz="0" izz="0.000" />
+        </inertial>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </collision>
+        <!-- dummy link does not need any attr. -->
+        <!-- <visual name = "mesh_2_z">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+    </link>
+    <joint name="joint_3_z" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_2_z" />
+        <child link="link_3_x" />
+        <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <!-- =================================================================================== -->
+    <!-- | Link 3 and joint 4 | -->
+    <!-- =================================================================================== -->
+    <link name="link_3_x">
+        
+<inertial>
+            <mass value="164.006" xyz=" 0.023521 0.157165  0.000000" />
+            <inertia ixx="16.43037097" ixy="0.336896677" ixz="0.018073572" iyy="2.381578838" iyz="0.191901642" izz="16.17115993" />
+        </inertial>
+
+        <visual name="mesh_3_z">
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <geometry>
+                <!-- <mesh filename = "L3.obj" scale = "1.0"/> -->
+                <mesh filename="package://robot_model/mesh/L3.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_model/mesh/L3.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint_4_x" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_3_x" />
+        <child link="link_3_y" />
+        <origin xyz="0.0410 0.7545 0.0000" rpy="-1.5708 0.0000 0.0000" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="link_3_y">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="0.001" xyz=" 0 0 0" />
+            <inertia ixx="0.000" ixy="0" ixz="0" iyy="0.000" iyz="0" izz="0.000" />
+        </inertial>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </collision>
+        <!-- dummy link does not need any attr. -->
+        <!-- <visual name = "mesh_3_y">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+    </link>
+    <joint name="joint_4_y" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_3_y" />
+        <child link="link_3_z" />
+        <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="link_3_z">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="0.001" xyz=" 0 0 0" />
+            <inertia ixx="0.000" ixy="0" ixz="0" iyy="0.000" iyz="0" izz="0.000" />
+        </inertial>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </collision>
+        <!-- dummy link does not need any attr. -->
+        <!-- <visual name = "mesh_3_z">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+    </link>
+    <joint name="joint_4_z" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_3_z" />
+        <child link="link_4_x" />
+        <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <!-- =================================================================================== -->
+    <!-- | Link 4 and joint 5 | -->
+    <!-- =================================================================================== -->
+    <link name="link_4_x">
+        
+<inertial>
+            <mass value=" 39.746" xyz=" 0.000000 0.001354 0.223432" />
+            <inertia ixx="0.419700279" ixy="0" ixz="0" iyy="0.425200882" iyz="0.009137089" izz="0.097243405" />
+        </inertial>
+
+        <visual name="mesh_4_x">
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <geometry>
+                <mesh filename="package://robot_model/mesh/L4.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_model/mesh/L4.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint_5_x" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_4_x" />
+        <child link="link_4_y" />
+        <origin xyz="0.0000 0.0000 0.245500" rpy="1.5708 0.0000 0.0000" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="link_4_y">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="0.001" xyz=" 0 0 0" />
+            <inertia ixx="0.000" ixy="0" ixz="0" iyy="0.000" iyz="0" izz="0.000" />
+        </inertial>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </collision>
+        <!-- dummy link does not need any attr. -->
+        <!-- <visual name = "mesh_4_y">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+    </link>
+    <joint name="joint_5_y" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_4_y" />
+        <child link="link_4_z" />
+        <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="link_4_z">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="0.001" xyz=" 0 0 0" />
+            <inertia ixx="0.000" ixy="0" ixz="0" iyy="0.000" iyz="0" izz="0.000" />
+        </inertial>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </collision>
+        <!-- dummy link does not need any attr. -->
+        <!-- <visual name = "mesh_4_z">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+    </link>
+    <joint name="joint_5_z" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_4_z" />
+        <child link="link_5_x" />
+        <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <!-- =================================================================================== -->
+    <!-- | Link 5 and joint 6 | -->
+    <!-- =================================================================================== -->
+    <link name="link_5_x">
+        
+<inertial>
+            <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+            <mass value=" 28.510" xyz=" 0.000000 0.054123 -0.037621" />
+            <inertia ixx="0.436341228" ixy="0.000008171" ixz="0.000000068" iyy="0.296286531" iyz="0.06785905" izz="0.294686677" />
+        </inertial>
+
+        <visual name="mesh_5_x">
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <geometry>
+                <!-- <mesh filename = "L5.obj" scale = "1.0"/> -->
+                <mesh filename="package://robot_model/mesh/L5.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_model/mesh/L5.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint_6_x" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_5_x" />
+        <child link="link_5_y" />
+        <origin xyz="0.0000 0.2400 0.0000" rpy="-1.5708 0.0000 0.0000" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="link_5_y">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="0.001" xyz=" 0 0 0" />
+            <inertia ixx="0.000" ixy="0" ixz="0" iyy="0.000" iyz="0" izz="0.000" />
+        </inertial>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </collision>
+        <!-- dummy link does not need any attr. -->
+        <!-- <visual name = "mesh_5_y">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+    </link>
+    <joint name="joint_6_y" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_5_y" />
+        <child link="link_5_z" />
+        <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="link_5_z">
+        
+<inertial>
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <mass value="0.001" xyz=" 0 0 0" />
+            <inertia ixx="0.000" ixy="0" ixz="0" iyy="0.000" iyz="0" izz="0.000" />
+        </inertial>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </collision>
+        <!-- dummy link does not need any attr. -->
+        <!-- <visual name = "mesh_5_z">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+		</visual>  -->
+    </link>
+    <joint name="joint_6_z" type="continuous">
+        <!-- <movement type = "rotational" rigidity = "flexible"/> -->
+        <parent link="link_5_z" />
+        <child link="link_6_x" />
+        <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <!-- =================================================================================== -->
+    <!-- | Link 6 | -->
+    <!-- =================================================================================== -->
+    <link name="link_6_x">
+        
+<inertial>
+            <origin xyz="0.0000 0.0000 0.0000" rpy="0.0000 0.0000 0.0000" />
+            <mass value=" 78.622" xyz="-0.065895 0.000000  0.122766" />
+            <inertia ixx="0.766497" ixy="0" ixz="0.01855" iyy="1.401573" iyz="0" izz="1.295152" />
+        </inertial>
+
+        <visual name="mesh_6">
+            <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+            <geometry>
+                <!-- <mesh filename = "L6Spindle.obj" scale = "1.0"/> -->
+                <mesh filename="package://robot_model/mesh/L6Spindle.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robot_model/mesh/L6Spindle.obj" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    
+<transmission name="trans_joint_1_x">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_1_x">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_1_x_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_1_y">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_1_y">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_1_y_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_1_z">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_1_z">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_1_z_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_2_x">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_2_x">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_2_x_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_2_y">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_2_y">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_2_y_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_2_z">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_2_z">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_2_z_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_3_x">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_3_x">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_3_x_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_3_y">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_3_y">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_3_y_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_3_z">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_3_z">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_3_z_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_4_x">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_4_x">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_4_x_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_4_y">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_4_y">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_4_y_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_4_z">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_4_z">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_4_z_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_5_x">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_5_x">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_5_x_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_5_y">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_5_y">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_5_y_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_5_z">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_5_z">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_5_z_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_6_x">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_6_x">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_6_x_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_6_y">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_6_y">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_6_y_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_6_z">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_6_z">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_6_z_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>

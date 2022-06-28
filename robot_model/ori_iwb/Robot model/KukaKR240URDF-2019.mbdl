@@ -1,0 +1,238 @@
+<mbs name="Kuka_KR240_R2500">
+
+	<link name = "link_0">
+		<visual name = "mesh_0">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<mesh filename = "L0.obj" scale = "1.0"/>
+			</geometry>
+			<material>
+				<texture filename = "L0.png"/>
+			</material>
+		</visual> 
+	</link>
+	
+	<link name = "link_1">
+		<mass value = "110.000" xyz = " 0.002646 0.018740 0.188026"/>
+		<inertia ixx = "3.236370867" ixy = "0.644464939" ixz = "0.468238095" iyy = "6.714710678" iyz = "0.257842574" izz = "5.649849463"/>
+		<visual name = "mesh_1">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<mesh filename = "L1.obj" scale = "1.0"/>
+			</geometry>
+			<material>
+				<texture filename = "L1.png"/>
+			</material>
+		</visual> 
+	</link>
+
+	<link name = "link_2">
+		<mass value = "239.748" xyz = " 0.427436 0.002950  0.236273"/>
+		<inertia ixx = "4.30639745" ixy = "0.165463221" ixz = "4.341148242" iyy = "40.01608253" iyz = "0.022575289" izz = "39.50583604"/>
+		<visual name = "mesh_2">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<mesh filename = "L2.obj" scale = "1.0"/>
+			</geometry>
+			<material>
+				<texture filename = "L2.png"/>
+			</material>
+		</visual> 
+	</link>
+	
+	<link name = "link_3">
+		<mass value = "164.006" xyz = " 0.023521 0.157165  0.000000"/>
+		<inertia ixx = "16.43037097" ixy = "0.336896677" ixz = "0.018073572" iyy = "2.381578838" iyz = "0.191901642" izz = "16.17115993"/>
+		<visual name = "mesh_3">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<mesh filename = "L3.obj" scale = "1.0"/>
+			</geometry>
+			<material>
+				<texture filename = "L3.png"/>
+			</material>
+		</visual> 
+	</link>
+	
+	<link name = "link_4">
+		<mass value = " 39.746" xyz = " 0.000000 0.001354 0.223432"/>
+		<inertia ixx = "0.419700279" ixy = "0" ixz = "0" iyy = "0.425200882" iyz = "0.009137089" izz = "0.097243405"/>
+		<visual name = "mesh_4">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<mesh filename = "L4.obj" scale = "1.0"/>
+			</geometry>
+			<material>
+				<texture filename = "L4.png"/>
+			</material>
+		</visual> 
+	</link>
+	
+	<link name = "link_5">
+		<mass value = " 28.510" xyz = " 0.000000 0.054123 -0.037621"/>
+		<inertia ixx = "0.436341228" ixy = "0.000008171" ixz = "0.000000068" iyy = "0.296286531" iyz = "0.06785905" izz = "0.294686677"/>
+		<visual name = "mesh_5">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<mesh filename = "L5.obj" scale = "1.0"/>
+			</geometry>
+			<material>
+				<texture filename = "L5.png"/>
+			</material>
+		</visual> 
+	</link>
+	
+	<link name = "link_6">
+		<mass value = " 78.622" xyz = "-0.065895 0.000000  0.122766"/>
+		<inertia ixx = "0.766497" ixy = "0" ixz = "0.01855" iyy = "1.401573" iyz = "0" izz = "1.295152"/>
+		<visual name = "mesh_6">
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<mesh filename = "L6Spindle.obj" scale = "1.0"/>
+			</geometry>
+			<material>
+				<texture filename = "L6Spindle.png"/>
+			</material>
+		</visual> 
+	</link>
+	
+	<joint name = "joint_0">
+		<movement type="weld" rigidity = "flexible"/>
+		<parent link = "ground"/>
+		<child link = "link_0"/>
+		<T_Parent_Joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<T_Child_Joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+	</joint>
+	
+	<joint name = "joint_1">
+		<movement type = "rotational" rigidity = "flexible"/>
+		<parent link="link_0"/>
+		<child link="link_1"/>
+		<T_parent_joint xyz = "0.0000 0.0000 0.2500" rpy = "0.0000 0.0000 0.0000"/>
+		<T_child_joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<position min = "-3.2289" max = "3.2289" offset = "0.0" home = "0.0"/>
+		<veclocity min = "-1.8326" max = "1.8326"/>
+		<acceleration min = "-4.3633" max = "4.3633"/>
+		<jerk max = "189.338"/>
+		<gear numerator = "-1798" denominator = "7" backlash = "0.0017"/>
+		<motor max = "55.0" inertia = "874.1766" nu = "0.89"/>
+		<torque max = "22080.0000"/>
+		<stiffness xyz = "inf inf inf" rpy = "16028000 16028000 5823000.0 "/> 
+		<dampingOld xyz = "15020 15020 15020" rpy = "15020 15020 15020"/>
+		<damping xyz = "262 262 262" rpy = "262 262 262"/>
+		<friction value = "1.2"/>
+		<backlashOld value = "0.0017"/>
+		<backlash value = "0.00003"/>
+	</joint>
+	
+	<joint name = "joint_2">
+		<movement type = "rotational" rigidity = "flexible"/>
+		<parent link="link_1"/>
+		<child link="link_2"/>
+		<T_parent_joint xyz = "0.3500 0.0000 0.4250" rpy = "0.0000 -1.5708 1.5708"/>
+		<T_child_joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<position min =  "0.0873" max = "2.4435" offset = "1.5708" home = "-1.5708"/>
+		<veclocity min = "-1.8675" max = "1.8675"/>
+		<acceleration min = "-4.3633" max = "4.3633"/>
+		<jerk max = "155.671"/>
+		<gear numerator = "-2782" denominator = "11" backlash = "0.0026"/>
+		<motor max = "55.0" inertia = "658.1154" nu = "0.89"/>
+		<torque max = "22080.0000"/>
+		<stiffness xyz = "inf inf inf" rpy = "13000000 13000000 8100000"/> 
+		<dampingOld xyz = "15020 15020 15020" rpy = "15020 15020 15020"/>
+		<damping xyz = "262 262 262" rpy = "262 262 262"/>
+		<friction value= "1.2"/>
+		<backlashOld value = "0.0016"/>
+		<backlash value = "0.00003"/>
+	</joint>
+	
+	<joint name = "joint_3">
+		<movement type = "rotational" rigidity = "flexible"/>
+		<parent link="link_2"/>
+		<child link="link_3"/>
+		<T_parent_joint xyz = "1.1500 0.0000 0.0000" rpy = "0.0000 0.0000 -3.14159"/>
+		<T_child_joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<position min = "-2.7052" max = "2.0944" offset = "-1.5708" home = "1.5708"/>
+		<veclocity min = "-1.9897" max = "1.9897"/>
+		<acceleration min = "-4.3633" max = "4.3633"/>
+		<jerk max = "194.329"/>
+		<gear numerator = "-4491" denominator = "19" backlash = "0.0017"/>
+		<motor max = "55.0" inertia = "559.9853" nu = "0.89"/>
+		<torque max = "15724.5586"/>
+		<stiffness xyz = "inf inf inf" rpy = "7400000 7400000 5200000"/> 
+		<dampingOld xyz = "15020 15020 15020" rpy = "15020 15020 15020"/>
+		<damping xyz = "262 262 262" rpy = "262 262 262"/>
+		<friction value= "1.2"/>
+		<backlashOld value = "0.0017"/>
+		<backlash value = "0.00003"/>
+	</joint>
+	
+	<joint name = "joint_4">
+		<movement type = "rotational" rigidity = "flexible"/>
+		<parent link="link_3"/>
+		<child link="link_4"/>
+		<T_parent_joint xyz = "0.0410 0.7545 0.0000" rpy = "-1.5708 0.0000 0.0000"/>
+		<T_child_joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<position min = "-6.1086" max = "6.1086" offset = "0.0" home = "0.0"/>
+		<veclocity min = "-2.3736" max = "2.3736"/>
+		<acceleration min = "-4.3633" max = "4.3633"/>
+		<jerk max = "319.747"/>
+		<gear numerator = "-1989" denominator = "10" backlash = "0.0028"/>
+		<motor max = "18.0" inertia = "93.73926" nu = "0.89"/>
+		<torque max =  "4923.5498"/>
+		<stiffness xyz = "inf inf inf" rpy = "3246000 3246000 1056000.0"/> 
+		<dampingOld xyz = "3000 3000 3000" rpy = "3000 3000 3000"/>
+		<damping xyz = "520 520 520" rpy = "520 520 520"/>
+		<friction value= "1.2"/>
+		<backlashOld value = "0.001"/>
+		<backlash value = "0.0000175"/>
+	</joint>
+	
+	<joint name = "joint_5">
+		<movement type = "rotational" rigidity = "flexible"/>
+		<parent link="link_4"/>
+		<child link="link_5"/>
+		<T_parent_joint xyz = "0.0000 0.0000 0.245500" rpy = "1.5708 0.0000 0.0000"/>
+		<T_child_joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<position min = "-2.1380" max = "2.1380" offset = "0.0" home = "0.0"/>
+		<veclocity min = "-2.2515" max = "2.2515"/>
+		<acceleration min = "-4.3633" max = "4.3633"/>
+		<jerk max = "303.320"/>
+		<gear numerator = "-629" denominator = "3" backlash = "0.0024"/>
+		<motor max = "18.0" inertia = "113.7964" nu = "0.89"/>
+		<torque max =  "4923.5498"/>
+		<stiffness xyz = "inf inf inf" rpy = "2528000 2528000 1203000.0"/> 
+		<dampingOld xyz = "3000 3000 3000" rpy = "3000 3000 3000"/>
+		<damping xyz = "520 520 520" rpy = "520 520 520"/>
+		<friction value= "1.2"/>
+		<backlashOld value = "0.001"/>
+		<backlash value = "0.0000175"/>
+	</joint>
+	
+	<joint name = "joint_6">
+		<movement type = "rotational" rigidity = "flexible"/>
+		<parent link="link_5"/>
+		<child link="link_6"/>
+		<T_parent_joint xyz = "0.0000 0.2400 0.0000" rpy = "-1.5708 0.0000 0.0000"/>
+		<T_child_joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<position min = "-6.1086" max = "6.1086" offset = "0.0" home = "0.0"/>
+		<veclocity min = "-3.5954" max = "3.5954"/>
+		<acceleration min = "-4.3633" max = "4.3633"/>
+		<jerk max = "315.185"/>
+		<gear numerator = "-175743" denominator = "1340" backlash = "0.0017"/>
+		<motor max = "18.0" inertia = "45.11652" nu = "0.89"/>
+		<torque max =  "2881.5835"/>
+		<stiffness xyz = "inf inf inf" rpy = "2191000 2191000 454000.0"/> 
+		<dampingOld xyz = "3000 3000 3000" rpy = "3000 3000 3000"/>
+		<damping xyz = "520 520 520" rpy = "520 520 520"/>
+		<friction value= "1.2"/>
+		<backlashOld value = "0.0005"/>
+		<backlash value = "0.00000873"/>
+	</joint>
+	
+	<cosy name = "TCP">
+		<parent link="link_6"/>
+		<T_parent_cosy xyz = "0.1705 0.0000 0.1165" rpy = "0.0000 -1.5708 0.0000"/>
+	</cosy>
+	
+</mbs>

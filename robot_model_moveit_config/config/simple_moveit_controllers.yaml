@@ -1,0 +1,12 @@
+controller_list:
+  - name: robot_model_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - joint_1_z
+      - joint_2_z
+      - joint_3_z
+      - joint_4_z
+      - joint_5_z
+      - joint_6_z

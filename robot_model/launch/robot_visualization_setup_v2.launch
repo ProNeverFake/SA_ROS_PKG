@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<launch>
+	<arg name="model" />
+	<!-- Parsing xacro and setting robot_description parameter -->
+
+	<param name="robot_description" textfile="$(find robot_model)/urdf/robot_model.urdf" />
+
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+	<!-- <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" /> -->
+	<!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
+	<!-- <node pkg="tf2_ros" type="static_transform_publisher" name="link1_broadcaster" args="1 0 0 0 0 0 1 link1_parent link1" /> -->
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" unless="$(arg use_gui)">
+		<rosparam param="source_list">[/iwb_joint_state]</rosparam>
+		<!-- <rosparam param="source_list">[/iwb_joint_state]</rosparam> -->
+	</node>
+	<node name="iwb_state_publisher_v2" pkg="iwb_state_publisher" type="iwb_state_publisher_v2.py"/>
+
+	<!-- Launch visualization in rviz -->
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot_model)/urdf.rviz" required="true" />
+
+</launch>

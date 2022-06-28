@@ -1,0 +1,130 @@
+robot_arm_group_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - joint_to_world
+    - world_to_base_joint
+    - joint_0
+    - joint_1_x
+    - joint_1_y
+    - joint_1_z
+    - joint_2_x
+    - joint_2_y
+    - joint_2_z
+    - joint_3_x
+    - joint_3_y
+    - joint_3_z
+    - joint_4_x
+    - joint_4_y
+    - joint_4_z
+    - joint_5_x
+    - joint_5_y
+    - joint_5_z
+    - joint_6_x
+    - joint_6_y
+    - joint_6_z
+  gains:
+    joint_to_world:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    world_to_base_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_0:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_1_x:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_1_y:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_1_z:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_2_x:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_2_y:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_2_z:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_3_x:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_3_y:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_3_z:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_4_x:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_4_y:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_4_z:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_5_x:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_5_y:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_5_z:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_6_x:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_6_y:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_6_z:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

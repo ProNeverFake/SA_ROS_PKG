@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<robot name="robot_model_test">
+
+	<link name="base_link_test">
+
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0" /> <!-- rotate PI/2 -->
+			<geometry>
+
+				<box size="0.5 0.5 0.5" />
+
+			</geometry>
+			<material name="White">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			</material>
+		</visual>
+
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+
+				<box size="0.5 0.5 0.5" />
+				<!-- <geometry>
+					<mesh filename="package://robot_model/mesh/L2.obj" scale="1 1 1" />
+				</geometry> -->
+
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="1" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="0.5" iyz="0.0" izz="1.0" />
+		</inertial>
+
+	</link>
+
+	<joint name = "joint_0" type = "fixed">
+		
+		<origin rpy="0 0 0" xyz="0 0 0"/>
+		<parent link = "base_link"/>
+		<child link = "link_0_x"/>
+		
+	</joint>
+
+	<!-- =================================================================================== -->
+	<!-- | Link 0 and joint 1 | -->
+	<!-- =================================================================================== -->
+	<link name = "link_0_x">
+		<inertial>
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<mass value = "110.000" xyz = " 0.0026 0.0187 0.1880"/>
+			<inertia ixx = "3.23" ixy = "0.6444" ixz = "0.4682" iyy = "6.714" iyz = "0.2578" izz = "5.6498"/>
+		</inertial>	
+
+		<visual>
+			<origin xyz = "0.000 0.000 0.000" rpy = " 0.0000 0.000 0.000"/>
+			<geometry>
+				<mesh filename = "package://robot_model/mesh/L0.obj" scale = "1 1 1"/>
+			</geometry>
+			<material name="White">
+				<color rgba="1.0 1.0 1.0 1.0" />
+			  </material>
+
+		</visual> 
+		<collision>
+			<origin xyz="0 0 0" rpy="0 ${M_PI/2} 0" />
+			<geometry>
+				<mesh filename = "package://robot_model/mesh/L0.obj" scale = "1 1 1"/>
+			</geometry>
+		</collision>
+	</link>
+
+	<!-- <link name="bottom_link">
+
+		<visual>
+		  <origin xyz=" 0 0 -0.04"  rpy="0 0 0"/>
+		  <geometry>
+	
+			<mesh filename = "package://mastering_ros_robot_description_pkg/urdf/L2.obj" scale = "1 1 1"/>
+	
+		  </geometry>
+		  <material name="Brown" />
+		</visual>
+	
+		<collision>
+		  <origin xyz=" 0 0 -0.04"  rpy="0 0 0"/>
+		  <geometry>
+			   <box size="1 1 0.02" />
+		  </geometry>
+		  </collision>>
+	
+	  </link> -->
+
+	<!-- <gazebo reference="link_0_x">
+		<material>Gazebo/Blue</material>
+	</gazebo> -->
+
+
+</robot>
+
+	

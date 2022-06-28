@@ -1,0 +1,27 @@
+controller_list:
+  - name: robot_arm_group_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - joint_to_world
+      - world_to_base_joint
+      - joint_0
+      - joint_1_x
+      - joint_1_y
+      - joint_1_z
+      - joint_2_x
+      - joint_2_y
+      - joint_2_z
+      - joint_3_x
+      - joint_3_y
+      - joint_3_z
+      - joint_4_x
+      - joint_4_y
+      - joint_4_z
+      - joint_5_x
+      - joint_5_y
+      - joint_5_z
+      - joint_6_x
+      - joint_6_y
+      - joint_6_z

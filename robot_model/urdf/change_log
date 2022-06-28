@@ -1,0 +1,21 @@
+headline robot
+material name
+joint type???
+ground not defined, inertia not supported
+
+in <link>, inertia:subterm
+
+in link, delete scale settings in <geometry> where using mesh file (obj)
+damping and friction in <dynamcis> of joint 1
+
+joint element "movement"?
+
+TODO: vielleicht braucht man bei links noch das attr. Collision.
+
+geometry for links : path pkg
+
+20.may
+    add color
+    mesh name repeat
+    TCP lack
+    

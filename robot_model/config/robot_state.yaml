@@ -1,0 +1,24 @@
+robot_model: 
+	name: 
+	  - joint_1_x
+	  - joint_1_y
+	  - joint_1_z
+	  - joint_2_x
+	  - joint_2_y
+	  - joint_2_z
+	  - joint_3_x
+	  - joint_3_y
+	  - joint_3_z
+	  - joint_4_x
+	  - joint_4_y
+	  - joint_4_z
+	  - joint_5_x
+	  - joint_5_y
+	  - joint_5_z
+	  - joint_6_x
+	  - joint_6_y
+	  - joint_6_z
+	position: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+	velocity: []
+	effort: []
+

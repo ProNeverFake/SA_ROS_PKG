@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+
+<launch>
+		
+	<node name="iwb_fake_controller" pkg="fake_controller" type="fake_controller.py"/>
+	<!-- <node pkg="tf2_ros" type="static_transform_publisher" name="link1_broadcaster" args="1 0 0 0 0 0 1 link1_parent link1" /> -->
+
+</launch>
