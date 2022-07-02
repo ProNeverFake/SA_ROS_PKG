@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://www.freepik.com/free-vector/robot-arm-concept-illustration_22635345.htm#query=robot%20arm&position=11&from_view=search" alt="Project logo"></a>
+ <img width=200px height=200px src="https://img.freepik.com/free-vector/robot-arm-concept-illustration_114360-8436.jpg?t=st=1656519056~exp=1656519656~hmac=72a1bfa23b9fb27258f7614a4a378c813cf75a67f002c39cb10ed8537110442c&w=740" alt="Project logo"></a>
 </p>
 
 <h3 align="center">IWB ROS PACKAGE</h3>
@@ -16,15 +16,14 @@
 
 ---
 
-<p align="center"> ros packages that support iwb robot modeling
+<p align="center"> ros packages to support iwb robot modeling
     <br> 
 </p>
 
-## 📝 Table of Contents
+## 📝 Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
@@ -34,7 +33,9 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+There are the ros packages for iwb milling robot simulation, relying on ROS noetic distribution. The packages perform robot modeling, visualization, path planning, controlling, simulation with physic simulator, and many other functionalities.
+
+You can simply run each package seperately with terminal command line, which helps you get to know how it works. Besides, with IWB_ROBOT class in iwb_ros python package, you can also run these ros functionalites in a few lines and make them cooperate with you own programm.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
