@@ -1,6 +1,7 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://img.freepik.com/free-vector/robot-arm-concept-illustration_114360-8436.jpg?t=st=1656519056~exp=1656519656~hmac=72a1bfa23b9fb27258f7614a4a378c813cf75a67f002c39cb10ed8537110442c&w=740" alt="Project logo"></a>
+  <!-- <a href="" rel="noopener"> -->
+ <img width=200px height=200px src="https://img.freepik.com/free-vector/robot-arm-concept-illustration_114360-8436.jpg?t=st=1656519056~exp=1656519656~hmac=72a1bfa23b9fb27258f7614a4a378c813cf75a67f002c39cb10ed8537110442c&w=740" alt="Project logo">
+ <!-- </a> -->
 </p>
 
 <h1 align="center">IWB ROS PACKAGE</h1>
