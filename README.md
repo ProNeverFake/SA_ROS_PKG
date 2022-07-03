@@ -41,10 +41,20 @@ You can simply run each package seperately with terminal command line, which hel
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [development](#development) for notes for developers.
 
-### System Requirements
-The packages work in ROS Noetics, which is primarily targeted at:
+The contents you need to walk through are:
+- System Environment
+- Prerequisites
+  - ROS Noetic
+  - Moveit!
+  - 
+
+- Installation
+
+
+### System Environment
+The packages work with ROS Noetic, which is primarily targeted at:
 
 - Ubuntu 20.04.4 LTS 
 
@@ -79,7 +89,33 @@ $ source /opt/ros/foxy/setup.bash
 You may have noticed that it's possible to avoid doing this every time opening a terminal by adding this line into your system "~/.bashrc". If you do so, please check if you append the line for the ROS version that of your use. (Remember this when transplant the project to a new ROS version, for example ROS 2 foxy)
 
 Don't forget to try the turtle example provided in ROS tutorial to validate your installation.
+###### Install Moveit
 
+The path & motion planning parts of the packages are realized by moveit, which is the most widely used for robot manipulation. And it cooperates well with ROS.
+
+You can install moveit ROS (binary) packages by execute the following line in your terminal:
+
+```console
+# here for ros noetic
+$ sudo apt install ros-noetic-moveit 
+```
+
+_tips: You could always install lacking ros packages using command line like:_
+
+```console
+$ sudo apt update
+$ sudo apt install ros-ROS_DISTRO-ros_package_name
+# for example
+$ sudo apt install ros-noetic-ros-control
+```
+The [Moveit tutorial](https://ros-planning.github.io/moveit_tutorials/) can help you to understand its planning functionalities. The Python interfaces of Moveit are explained [Here](https://ros-planning.github.io/moveit_tutorials/doc/move_group_python_interface/move_group_python_interface_tutorial.html), which is quite helpful. And the process to set up a robot for Moveit is shown [Here](https://ros-planning.github.io/moveit_tutorials/doc/setup_assistant/setup_assistant_tutorial.html).
+
+Besides, for transplanting project to ROS 2, you may need Moveit 2 instead of Moveit.
+
+
+###### Others
+
+TODO
 
 ### Installing
 
