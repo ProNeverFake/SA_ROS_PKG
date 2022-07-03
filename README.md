@@ -48,8 +48,7 @@ The contents you need to walk through are:
 - Prerequisites
   - ROS Noetic
   - Moveit!
-  - 
-
+  - Others
 - Installation
 
 
@@ -119,49 +118,72 @@ TODO
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+After fulfilling the prerequisites, you can now install the packages to your device.
 
-Say what the step will be
+Open a terminal (ctrl+T) and run the lines below to make new directory for the project.
 
+```console
+$ cd
+$ mkdir -p sa_ws/src
+$ cd sa_ws/src
 ```
-Give the example
-```
+Then run git command to clone the packages into your new directory (You may need permission for that, e.g. add you as a maintainer.):
 
-And repeat
-
+```console
+# Do not ignore the point at last!
+$ git clone https://gitlab.lrz.de/00000000014A6C01/sa_bblab.git .
 ```
-until finished
-```
+Now check the packages you cloned. You should build the packages first before using:
 
-End with an example of getting some data out of the system or using it for a little demo.
+_tips: Do not forget to source your ROS setup before using any functionality of ROS (especially when build a ROS package)._
+
+```console
+$ source /opt/ros/noetic/setup.bash
+$ cd ~/sa_ws
+$ catkin_make
+```
+Here the build tool catkin is used, which should be installed within ROS-Noetic. Install it manually if not so.
+
+If no error message appear, the installation is then successful. You should also run some test command in terminal to validate the installation.
+
+
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
-Explain how to run the automated tests for this system.
+There are some test commands to be run for testing the installation and functionalies of our packages. Firstly, the visualization of the robot, and secondly, a "fake control" to move the robot link.
 
-### Break down into end to end tests
+The command below depends on rivz, which should be included in ROS installation. Set it manually if some errors appear.
 
-Explain what these tests test and why
+Open a new terminal and run the commands below:
 
+```console
+# source the ROS setup first
+$ source /opt/ros/noetic/setup.bash
+# then source the setup of our packages
+$ source ~/sa_ws/devel/setup.bash
+# to visualize the robot with rivz
+$ roslaunch robot_model view_robot.launch
 ```
-Give an example
+This should open rivz and you may see our milling robot in it like this:
+
+![The visualization of the robot](/readme_src/view_robot.png "view_robot")
+
+Close it with keyboard interruption (ctrl+c) in the same terminal. Then run another command:
+
+```console
+$ roslaunch robot_model 
+$ robot_visualization_setup_v2.launch
 ```
+The rviz should be opened again and you should be able to see the last link rotating around a horizonal axis. Close everything if no error appears.
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
+The test part ends here.
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+TODO
 
 ## 🚀 Development <a name = "development"></a>
 
-Add additional notes about how to deploy this on a live system.
+TODO structure of the project
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
