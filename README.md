@@ -48,26 +48,37 @@ The packages work in ROS Noetics, which is primarily targeted at:
 
 - Ubuntu 20.04.4 LTS 
 
-Other systems are supported to varying degrees. (--- [ROS Noetics](http://wiki.ros.org/noetic))
+Other systems are supported to varying degrees. (--- [**ROS Noetics**](http://wiki.ros.org/noetic))
 
 Besides, if you are running everything on a virtual machine, the following configurations are recommended:
 
 - 30 GB storage.
 - TODO...
 
-You can follow the [Tutorial Here](TODO) to setup a virtual machine.
+You can follow the [**Tutorial Here**](https://ubuntu.tutorials24x7.com/blog/how-to-install-ubuntu-20-04-lts-on-windows-using-vmware-workstation-player) to setup a virtual machine.
 
 ### Prerequisites
 #### Install ROS Noetic
-The packages based on ROS Noetic distribution. You may install the desktop version of ROS Noetic [Here](http://wiki.ros.org/noetic/Installation/Ubuntu). Please choose Desktop-Full install, which is also recommanded in the page.
+The packages based on ROS Noetic distribution. You may install the desktop version of ROS Noetic [**Here**](http://wiki.ros.org/noetic/Installation/Ubuntu). Please choose Desktop-Full install, which is also recommanded in the page.
 
 
 Every time you want to run the packages with terminal, use the following command to setup the ROS environment.
 
-
-```
+```console
 source /opt/ros/noetic/setup.bash
 ```
+
+if you want to source a different version of ROS, this line would be:
+
+```console
+source /opt/ros/ROS-DISTRO/setup.bash
+#
+
+```
+
+
+You may have noticed that it's possible to avoid doing this every time opening a terminal by adding this line into your system "~/.bashrc". If you do so, please check if you append the line for the ROS version that of your use. (Remember this when transplant the project to a new ROS version, for example ROS 2 foxy)
+
 
 ### Installing
 
