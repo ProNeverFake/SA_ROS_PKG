@@ -1,7 +1,7 @@
 <p align="center">
-  <!-- <a href="" rel="noopener"> -->
+  <a href="" rel="noopener">
  <img width=200px height=200px src="https://img.freepik.com/free-vector/robot-arm-concept-illustration_114360-8436.jpg?t=st=1656519056~exp=1656519656~hmac=72a1bfa23b9fb27258f7614a4a378c813cf75a67f002c39cb10ed8537110442c&w=740" alt="Project logo">
- <!-- </a> -->
+ </a>
 </p>
 
 <h1 align="center">IWB ROS PACKAGE</h1>
@@ -26,6 +26,7 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
+- [Deployment](#deployment)
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
 - [Contributing](../CONTRIBUTING.md)
@@ -34,7 +35,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-There are the ros packages for iwb milling robot simulation, relying on ROS noetic distribution. The packages perform robot modeling, visualization, path planning, controlling, simulation with physic simulator, and many other functionalities.
+There are the ros packages for iwb milling robot simulation, relying on ROS Noetic distribution. The packages perform robot modeling, visualization, path planning, controlling, simulation with physic simulator, and many other functionalities.
 
 You can simply run each package seperately with terminal command line, which helps you get to know how it works. Besides, with IWB_ROBOT class in iwb_ros python package, you can also run these ros functionalites in a few lines and make them cooperate with you own programm.
 
@@ -42,12 +43,30 @@ You can simply run each package seperately with terminal command line, which hel
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### System Requirements
+The packages work in ROS Noetics, which is primarily targeted at:
 
-What things you need to install the software and how to install them.
+- Ubuntu 20.04.4 LTS 
+
+Other systems are supported to varying degrees. (--- [ROS Noetics](http://wiki.ros.org/noetic))
+
+Besides, if you are running everything on a virtual machine, the following configurations are recommended:
+
+- 30 GB storage.
+- TODO...
+
+You can follow the [Tutorial Here](TODO) to setup a virtual machine.
+
+### Prerequisites
+#### Install ROS Noetic
+The packages based on ROS Noetic distribution. You may install the desktop version of ROS Noetic [Here](http://wiki.ros.org/noetic/Installation/Ubuntu). Please choose Desktop-Full install, which is also recommanded in the page.
+
+
+Every time you want to run the packages with terminal, use the following command to setup the ROS environment.
+
 
 ```
-Give examples
+source /opt/ros/noetic/setup.bash
 ```
 
 ### Installing
@@ -98,19 +117,17 @@ Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
+- [ROS Noeitcs](https://www.mongodb.com/) - Robot operation system
 - [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+- [@BBlab](https://github.com/kylelobo) - Student in mechanical engineering
+- And ... more contributers in the future.
+<!-- See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project. -->
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- TODO: citing and inspiration mabe
+- Thanks for your contribution to the project!
+- ...
