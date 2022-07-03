@@ -26,7 +26,7 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
-- [Deployment](#deployment)
+- [Development](#development)
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
 - [Contributing](../CONTRIBUTING.md)
@@ -37,7 +37,7 @@
 
 There are the ros packages for iwb milling robot simulation, relying on ROS Noetic distribution. The packages perform robot modeling, visualization, path planning, controlling, simulation with physic simulator, and many other functionalities.
 
-You can simply run each package seperately with terminal command line, which helps you get to know how it works. Besides, with IWB_ROBOT class in iwb_ros python package, you can also run these ros functionalites in a few lines and make them cooperate with you own programm.
+You can simply run each package seperately with terminal command line, which helps you to get to know how it works. Besides, with IWB_ROBOT class in iwb_ros python package, you can also run these ros functionalites in a few python lines and make them cooperate with you own programm.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -58,23 +58,22 @@ Besides, if you are running everything on a virtual machine, the following confi
 You can follow the [**Tutorial Here**](https://ubuntu.tutorials24x7.com/blog/how-to-install-ubuntu-20-04-lts-on-windows-using-vmware-workstation-player) to setup a virtual machine.
 
 ### Prerequisites
-#### Install ROS Noetic
+###### Install ROS Noetic
 The packages based on ROS Noetic distribution. You may install the desktop version of ROS Noetic [**Here**](http://wiki.ros.org/noetic/Installation/Ubuntu). Please choose Desktop-Full install, which is also recommanded in the page.
 
 
 Every time you want to run the packages with terminal, use the following command to setup the ROS environment.
 
 ```console
-source /opt/ros/noetic/setup.bash
+$ source /opt/ros/noetic/setup.bash
 ```
 
 if you want to source a different version of ROS, this line would be:
 
 ```console
-source /opt/ros/ROS-DISTRO/setup.bash
+$ source /opt/ros/ROS-DISTRO/setup.bash
 # for example ROS 2 foxy:
-source /opt/ros/foxy/setup.bash
-
+$ source /opt/ros/foxy/setup.bash
 ```
 
 You may have noticed that it's possible to avoid doing this every time opening a terminal by adding this line into your system "~/.bashrc". If you do so, please check if you append the line for the ROS version that of your use. (Remember this when transplant the project to a new ROS version, for example ROS 2 foxy)
@@ -124,14 +123,14 @@ Give an example
 
 Add notes about how to use the system.
 
-## 🚀 Deployment <a name = "deployment"></a>
+## 🚀 Development <a name = "development"></a>
 
 Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
 - [ROS Noeitcs](https://www.mongodb.com/) - Robot operation system
-- [Express](https://expressjs.com/) - Server Framework
+- [Pykdl](https://expressjs.com/) - Robot kinematics
 
 ## ✍️ Authors <a name = "authors"></a>
 
