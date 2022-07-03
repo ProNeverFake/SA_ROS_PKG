@@ -72,12 +72,14 @@ if you want to source a different version of ROS, this line would be:
 
 ```console
 source /opt/ros/ROS-DISTRO/setup.bash
-#
+# for example ROS 2 foxy:
+source /opt/ros/foxy/setup.bash
 
 ```
 
-
 You may have noticed that it's possible to avoid doing this every time opening a terminal by adding this line into your system "~/.bashrc". If you do so, please check if you append the line for the ROS version that of your use. (Remember this when transplant the project to a new ROS version, for example ROS 2 foxy)
+
+Don't forget to try the turtle example provided in ROS tutorial to validate your installation.
 
 
 ### Installing
