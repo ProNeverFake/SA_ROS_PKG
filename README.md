@@ -9,9 +9,9 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://gitlab.lrz.de/00000000014A6C01/sa_bblab/-/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+<!-- [![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://gitlab.lrz.de/00000000014A6C01/sa_bblab/-/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls) -->
 
 </div>
 
@@ -35,13 +35,13 @@
 
 ## 🧐 About <a name = "about"></a>
 
-There are the ros packages for iwb milling robot simulation, relying on ROS Noetic distribution. The packages perform robot modeling, visualization, path planning, controlling, simulation with physic simulator, and many other functionalities.
+There are **the ros packages for iwb milling robot simulation**, relying on **ROS Noetic** distribution. The packages perform **robot modeling, visualization, path planning, controlling, simulation with physic simulator**, and many other functionalities.
 
-You can simply run each package seperately with terminal command line, which helps you to get to know how it works. Besides, with IWB_ROBOT class in iwb_ros python package, you can also run these ros functionalites in a few python lines and make them cooperate with you own programm.
+You can simply **run each package seperately with terminal command line**, which helps you to get to know how it works. Besides, with IWB_ROBOT class in iwb_ros python package, you can also run these ros functionalites in a few python lines and **make them cooperate with you own program**.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [development](#development) for notes for developers.
+These instructions will **get you a copy of the project up** and **running on your local machine** for development and testing purposes. See [development](#development) for notes for developers.
 
 The contents you need to walk through are:
 - System Environment
@@ -55,23 +55,23 @@ The contents you need to walk through are:
 ### System Environment
 The packages work with ROS Noetic, which is primarily targeted at:
 
-- Ubuntu 20.04.4 LTS 
+- **Ubuntu 20.04.4 LTS**
 
-Other systems are supported to varying degrees. (--- [**ROS Noetics**](http://wiki.ros.org/noetic))
+>Other systems are supported to varying degrees. (--- [**ROS Noetics**](http://wiki.ros.org/noetic))
 
 Besides, if you are running everything on a virtual machine, the following configurations are recommended:
 
-- 30 GB storage.
+- **30 GB storage.**
 - TODO...
 
 You can follow the [**Tutorial Here**](https://ubuntu.tutorials24x7.com/blog/how-to-install-ubuntu-20-04-lts-on-windows-using-vmware-workstation-player) to setup a virtual machine.
 
 ### Prerequisites
 ###### Install ROS Noetic
-The packages are based on ROS Noetic distribution. You may install the desktop version of ROS Noetic [**Here**](http://wiki.ros.org/noetic/Installation/Ubuntu). Please choose Desktop-Full install, which is also recommanded on that page.
+The packages are based on ROS Noetic distribution. You may install the **desktop version** of ROS Noetic [**Here**](http://wiki.ros.org/noetic/Installation/Ubuntu). Please choose **Desktop-Full** install, which is also recommanded on that page.
 
 
-Every time you want to run the packages with terminal, use the following command to setup the ROS environment.
+Every time you want to run the packages with terminal, use the following command to **setup the ROS environment**.
 
 ```console
 $ source /opt/ros/noetic/setup.bash
@@ -85,14 +85,14 @@ $ source /opt/ros/ROS-DISTRO/setup.bash
 $ source /opt/ros/foxy/setup.bash
 ```
 
-You may have noticed that it's possible to avoid doing this every time opening a terminal by adding this line into your system "~/.bashrc". If you do so, please check if you append the line for the ROS version that of your use. (Remember this when transplant the project to a new ROS version, for example ROS 2 foxy)
+You may have noticed that it's possible to avoid doing this every time opening a terminal by **adding this line into your system "~/.bashrc"**. If you do so, please check if you append the line for **the ROS version that of your use**. (Remember this when transplant the project to a new ROS version, for example ROS 2 foxy)
 
 Don't forget to try the turtle example provided in ROS tutorial to validate your installation.
 ###### Install Moveit
 
-The path & motion planning parts of the packages are realized by moveit, which is the most widely used for robot manipulation. And it cooperates well with ROS.
+The path & motion planning parts of the packages are realized by **Moveit**, which is the most widely used for **robot manipulation**. And it cooperates well with ROS.
 
-You can install moveit ROS (binary) packages by execute the following line in your terminal:
+You can **install moveit ROS (binary) packages** by execute the following line in your terminal:
 
 ```console
 # here for ros noetic
@@ -108,9 +108,9 @@ $ sudo apt install ros-ROS_DISTRO-ros_package_name
 # for example
 $ sudo apt install ros-noetic-ros-control
 ```
-The [Moveit tutorial](https://ros-planning.github.io/moveit_tutorials/) can help you to understand its planning functionalities. The Python interfaces of Moveit are explained [Here](https://ros-planning.github.io/moveit_tutorials/doc/move_group_python_interface/move_group_python_interface_tutorial.html), which is quite helpful. And the process to set up a robot for Moveit is shown [Here](https://ros-planning.github.io/moveit_tutorials/doc/setup_assistant/setup_assistant_tutorial.html).
+The [**Moveit Tutorial**](https://ros-planning.github.io/moveit_tutorials/) can help you to understand its planning functionalities. The **Python interfaces** of Moveit are explained [Here](https://ros-planning.github.io/moveit_tutorials/doc/move_group_python_interface/move_group_python_interface_tutorial.html), which is quite helpful. And the process to **set up a robot configuration for Moveit** is shown [Here](https://ros-planning.github.io/moveit_tutorials/doc/setup_assistant/setup_assistant_tutorial.html).
 
-Besides, for transplanting project to ROS 2, you may need Moveit 2 instead of Moveit.
+Besides, for transplanting project to ROS 2, you may need Moveit2 instead of Moveit.
 
 
 ###### Others
@@ -121,20 +121,20 @@ TODO
 
 After fulfilling the prerequisites, you can now install the packages to your device.
 
-Open a terminal (ctrl+T) and run the lines below to make new directory for the project.
+Open a terminal (ctrl+T) and run the lines below to **make new directory** for the project.
 
 ```console
 $ cd
 $ mkdir -p sa_ws/src
 $ cd sa_ws/src
 ```
-Then run git command to clone the packages into your new directory (You may need permission for that, e.g. add you as a maintainer.):
+Then run git command to **clone the packages into your new directory** (You may need permission for that, e.g. ask the owner to add you as a maintainer.):
 
 ```console
-# Do not ignore the point at last!
+# Do not ignore the point "." at last!
 $ git clone https://gitlab.lrz.de/00000000014A6C01/sa_bblab.git .
 ```
-Now check the packages you cloned. You should build the packages first before using:
+Now check the packages you cloned. You should **build the packages** first before using:
 
 _**tips:** Do not forget to source your ROS setup before using any functionality of ROS (especially when build a ROS package)._
 
@@ -143,7 +143,7 @@ $ source /opt/ros/noetic/setup.bash
 $ cd ~/sa_ws
 $ catkin_make
 ```
-Here the build tool catkin is used, which should be installed within ROS-Noetic. Install it manually if not so.
+Here the build tool **catkin** is used, which should be installed within ROS Noetic. Install it manually if it's not so.
 
 If no error message appear, the installation is then successful. You should also run some test command in terminal to validate the installation.
 
@@ -151,14 +151,14 @@ If no error message appear, the installation is then successful. You should also
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
-There are some test commands to be run for testing the installation and functionalies of our packages. Firstly, the visualization of the robot, and secondly, a "fake control" to move the robot link.
+There are some test commands to be ran for **testing the installation and functionalies** of our packages. Firstly, the **visualization** of the robot, and secondly, a **"fake control"** to move the robot link.
 
-The command below depends on rivz, which should be included in ROS installation. Set it manually if some errors appear.
+The command below depends on **rivz**, which should be included in ROS installation. Set it manually if some errors appear.
 
 Open a new terminal and run the commands below:
 
 ```console
-# source the ROS setup first
+# remember to source the ROS setup first
 $ source /opt/ros/noetic/setup.bash
 # then source the setup of our packages
 $ source ~/sa_ws/devel/setup.bash
@@ -174,9 +174,12 @@ Close it with keyboard interruption (ctrl+c) in the same terminal. Then run anot
 ```console
 $ roslaunch robot_model robot_visualization_setup_v2.launch
 ```
-The rviz should be opened again and your are able to see the last link rotating around a horizonal axis. Close everything if no error appears.
+The rviz should be opened again and your are able to see the last link rotating around a horizonal axis. Stop and close everything if no error appears.
+
+__tips: You should stop the process first (ctrl+c) and then close the terminal. That guarantees the roscore and master are not alive any more, otherwise this may cause some bugs when developing programs. When programming in python, use rospy or other API to achieve it.__
 
 The test part ends here.
+
 ## 🎈 Usage <a name="usage"></a>
 These instructions help you with using the packages. Some examples are shown here to explain **how to launch the program with terminal line**. If you want to make these packages cooperate with corresponding IWB's python package, you may check the tutorial of the python package [**Here**](TODO: link of the toturial).
 
