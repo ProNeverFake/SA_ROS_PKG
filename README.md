@@ -9,8 +9,8 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://gitlab.lrz.de/00000000014A6C01/sa_bblab/-/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![Gitlab Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://gitlab.lrz.de/00000000014A6C01/sa_bblab/-/issues)
+[![Gitlab Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
@@ -68,7 +68,7 @@ You can follow the [**Tutorial Here**](https://ubuntu.tutorials24x7.com/blog/how
 
 ### Prerequisites
 ###### Install ROS Noetic
-The packages based on ROS Noetic distribution. You may install the desktop version of ROS Noetic [**Here**](http://wiki.ros.org/noetic/Installation/Ubuntu). Please choose Desktop-Full install, which is also recommanded in the page.
+The packages are based on ROS Noetic distribution. You may install the desktop version of ROS Noetic [**Here**](http://wiki.ros.org/noetic/Installation/Ubuntu). Please choose Desktop-Full install, which is also recommanded on that page.
 
 
 Every time you want to run the packages with terminal, use the following command to setup the ROS environment.
@@ -99,7 +99,8 @@ You can install moveit ROS (binary) packages by execute the following line in yo
 $ sudo apt install ros-noetic-moveit 
 ```
 
-_tips: You could always install lacking ros packages using command line like:_
+_**tips:** You could always install missing ros packages using command line like:_
+
 
 ```console
 $ sudo apt update
@@ -135,7 +136,7 @@ $ git clone https://gitlab.lrz.de/00000000014A6C01/sa_bblab.git .
 ```
 Now check the packages you cloned. You should build the packages first before using:
 
-_tips: Do not forget to source your ROS setup before using any functionality of ROS (especially when build a ROS package)._
+_**tips:** Do not forget to source your ROS setup before using any functionality of ROS (especially when build a ROS package)._
 
 ```console
 $ source /opt/ros/noetic/setup.bash
@@ -171,15 +172,20 @@ This should open rivz and you may see our milling robot in it like this:
 Close it with keyboard interruption (ctrl+c) in the same terminal. Then run another command:
 
 ```console
-$ roslaunch robot_model 
-$ robot_visualization_setup_v2.launch
+$ roslaunch robot_model robot_visualization_setup_v2.launch
 ```
-The rviz should be opened again and you should be able to see the last link rotating around a horizonal axis. Close everything if no error appears.
+The rviz should be opened again and your are able to see the last link rotating around a horizonal axis. Close everything if no error appears.
 
 The test part ends here.
 ## 🎈 Usage <a name="usage"></a>
+These instructions help you with using the packages. Some examples are shown here to explain **how to launch the program with terminal line**. If you want to make these packages cooperate with corresponding IWB's python package, you may check the tutorial of the python package [**Here**](TODO: link of the toturial).
 
-TODO
+Before your hands-on practice, it would be great if you know about the **basic bash line command of linux (Ubuntu)**. You can follow some tutorials like [Here](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) to learn about that.
+
+Besides, the basic of **ROS terminal command** is also necessary for that. ROS has official tutorial for beginners and you can find that [Here](http://wiki.ros.org/ROS/Tutorials). For beginners it's enough to know the terminal commands, but you may still need to go through all of them if you are a developer.
+
+
+
 
 ## 🚀 Development <a name = "development"></a>
 
@@ -188,7 +194,9 @@ TODO structure of the project
 ## ⛏️ Built Using <a name = "built_using"></a>
 
 - [ROS Noeitcs](https://www.mongodb.com/) - Robot operation system
-- [Pykdl](https://expressjs.com/) - Robot kinematics
+- [Moveit](https://moveit.ros.org/) - Motion planning tool
+- [Pykdl](http://docs.ros.org/en/diamondback/api/kdl/html/python/) - Robot kinematics
+- [Pykdl Utils](https://github.com/gt-ros-pkg/hrl-kdl/tree/125e8746814804b69ae1cd919276304da10e5d3c/pykdl_utils/src/pykdl_utils) - User interfaces of Pykdl 
 
 ## ✍️ Authors <a name = "authors"></a>
 
