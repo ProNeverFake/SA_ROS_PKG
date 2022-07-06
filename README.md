@@ -25,6 +25,7 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
+- [Running the Tests](#tests)
 - [Usage](#usage)
 - [Development](#development)
 - [Built Using](#built_using)
@@ -41,7 +42,7 @@ You can simply **run each package seperately with terminal command line**, which
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will **get you a copy of the project up** and **running on your local machine** for development and testing purposes. See [development](#development) for notes for developers.
+These instructions will **get you a copy of the project up** and enable it to **run with your local machine** for development and testing purposes. See [development](#development) for notes for developers.
 
 The contents you need to walk through are:
 - System Environment
@@ -59,7 +60,7 @@ The packages work with ROS Noetic, which is primarily targeted at:
 
 >Other systems are supported to varying degrees. (--- [**ROS Noetics**](http://wiki.ros.org/noetic))
 
-Besides, if you are running everything on a virtual machine, the following configurations are recommended:
+Besides, if you are running everything with a virtual machine, the following configurations are recommended:
 
 - **30 GB storage.**
 - TODO...
@@ -121,7 +122,7 @@ TODO
 
 After fulfilling the prerequisites, you can now install the packages to your device.
 
-Open a terminal (ctrl+T) and run the lines below to **make new directory** for the project.
+Open a terminal (ctrl+alt+T) and run the lines below to **make new directory** for the project.
 
 ```console
 $ cd
@@ -176,7 +177,7 @@ $ roslaunch robot_model robot_visualization_setup_v2.launch
 ```
 The rviz should be opened again and your are able to see the last link rotating around a horizonal axis. Stop and close everything if no error appears.
 
-__tips: You should stop the process first (ctrl+c) and then close the terminal. That guarantees the roscore and master are not alive any more, otherwise this may cause some bugs when developing programs. When programming in python, use rospy or other API to achieve it.__
+***tips: You should stop the process first (ctrl+c) and then close the terminal. That guarantees the roscore and master are not alive any more, otherwise this may cause some bugs when developing programs. When programming in python, use rospy or other API to achieve it.***
 
 The test part ends here.
 
