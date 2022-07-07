@@ -69,10 +69,10 @@ You can follow the [**Tutorial Here**](https://ubuntu.tutorials24x7.com/blog/how
 
 ### Prerequisites
 ###### Install ROS Noetic
-The packages are based on ROS Noetic distribution. You may install the **desktop version** of ROS Noetic [**Here**](http://wiki.ros.org/noetic/Installation/Ubuntu). Please choose **Desktop-Full** install, which is also recommanded on that page.
+The packages are based on ROS Noetic distribution. You may install the **desktop version** of ROS Noetic [**Here**](http://wiki.ros.org/noetic/Installation/Ubuntu). Please choose **Desktop-Full** install, which is also recommanded on that page. The installation may take 15 minutes or longer, according to your network connection.
 
 
-Every time you want to run the packages with terminal, use the following command to **setup the ROS environment**.
+After installation, every time you want to run the packages with terminal, use the following command to **setup the ROS environment**.
 
 ```console
 $ source /opt/ros/noetic/setup.bash
@@ -194,6 +194,10 @@ Besides, the basic of **ROS terminal command** is also necessary for that. ROS h
 ## 🚀 Development <a name = "development"></a>
 
 TODO structure of the project
+
+###### Help to improve this tutorial
+
+The Gitlab Markdown could be found [Here](https://docs.gitlab.com/ee/user/markdown.html).
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
