@@ -74,16 +74,16 @@ The packages are based on ROS Noetic distribution. You may install the **desktop
 
 After installation, every time you want to run the packages with terminal, use the following command to **setup the ROS environment**.
 
-```console
-$ source /opt/ros/noetic/setup.bash
+```sh
+source /opt/ros/noetic/setup.bash
 ```
 
 if you want to source a different version of ROS, this line would be:
 
-```console
-$ source /opt/ros/ROS-DISTRO/setup.bash
+```sh
+source /opt/ros/ROS-DISTRO/setup.bash
 # for example ROS 2 foxy:
-$ source /opt/ros/foxy/setup.bash
+source /opt/ros/foxy/setup.bash
 ```
 
 You may have noticed that it's possible to avoid doing this every time opening a terminal by **adding this line into your system "~/.bashrc"**. If you do so, please check if you append the line for **the ROS version that of your use**. (Remember this when transplant the project to a new ROS version, for example ROS 2 foxy)
@@ -95,19 +95,19 @@ The path & motion planning parts of the packages are realized by **Moveit**, whi
 
 You can **install moveit ROS (binary) packages** by execute the following line in your terminal:
 
-```console
+```sh
 # here for ros noetic
-$ sudo apt install ros-noetic-moveit 
+sudo apt install ros-noetic-moveit 
 ```
 
 _**tips:** You could always install missing ros packages using command line like:_
 
 
-```console
-$ sudo apt update
-$ sudo apt install ros-ROS_DISTRO-ros_package_name
+```sh
+sudo apt update
+sudo apt install ros-ROS_DISTRO-ros_package_name
 # for example
-$ sudo apt install ros-noetic-ros-control
+sudo apt install ros-noetic-ros-control
 ```
 The [**Moveit Tutorial**](https://ros-planning.github.io/moveit_tutorials/) can help you to understand its planning functionalities. The **Python interfaces** of Moveit are explained [Here](https://ros-planning.github.io/moveit_tutorials/doc/move_group_python_interface/move_group_python_interface_tutorial.html), which is quite helpful. And the process to **set up a robot configuration for Moveit** is shown [Here](https://ros-planning.github.io/moveit_tutorials/doc/setup_assistant/setup_assistant_tutorial.html).
 
@@ -124,25 +124,25 @@ After fulfilling the prerequisites, you can now install the packages to your dev
 
 Open a terminal (ctrl+alt+T) and run the lines below to **make new directory** for the project.
 
-```console
-$ cd
-$ mkdir -p sa_ws/src
-$ cd sa_ws/src
+```sh
+cd
+mkdir -p sa_ws/src
+cd sa_ws/src
 ```
 Then run git command to **clone the packages into your new directory** (You may need permission for that, e.g. ask the owner to add you as a maintainer.):
 
-```console
+```sh
 # Do not ignore the point "." at last!
-$ git clone https://gitlab.lrz.de/00000000014A6C01/sa_bblab.git .
+git clone https://gitlab.lrz.de/00000000014A6C01/sa_bblab.git .
 ```
 Now check the packages you cloned. You should **build the packages** first before using:
 
 _**tips:** Do not forget to source your ROS setup before using any functionality of ROS (especially when build a ROS package)._
 
-```console
-$ source /opt/ros/noetic/setup.bash
-$ cd ~/sa_ws
-$ catkin_make
+```sh
+source /opt/ros/noetic/setup.bash
+cd ~/sa_ws
+catkin_make
 ```
 Here the build tool **catkin** is used, which should be installed within ROS Noetic. Install it manually if it's not so.
 
@@ -158,13 +158,13 @@ The command below depends on **rivz**, which should be included in ROS installat
 
 Open a new terminal and run the commands below:
 
-```console
+```sh
 # remember to source the ROS setup first
-$ source /opt/ros/noetic/setup.bash
+source /opt/ros/noetic/setup.bash
 # then source the setup of our packages
-$ source ~/sa_ws/devel/setup.bash
+source ~/sa_ws/devel/setup.bash
 # to visualize the robot with rivz
-$ roslaunch robot_model view_robot.launch
+roslaunch robot_model view_robot.launch
 ```
 This should open rivz and you may see our milling robot in it like this:
 
@@ -172,8 +172,8 @@ This should open rivz and you may see our milling robot in it like this:
 
 Close it with keyboard interruption (ctrl+c) in the same terminal. Then run another command:
 
-```console
-$ roslaunch robot_model robot_visualization_setup_v2.launch
+```sh
+roslaunch robot_model robot_visualization_setup_v2.launch
 ```
 The rviz should be opened again and your are able to see the last link rotating around a horizonal axis. Stop and close everything if no error appears.
 
