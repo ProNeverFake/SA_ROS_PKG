@@ -1,0 +1,12 @@
+# Blender MTL File: 'Roboterzelle-Jicong-L6.blend'
+# Material Count: 1
+
+newmtl KUKA_dunkel_(Spindel)
+Ns 0.000000
+Ka 0.392265 0.392265 0.392265
+Kd 0.069973 0.063681 0.060245
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3

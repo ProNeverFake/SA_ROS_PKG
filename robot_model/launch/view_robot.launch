@@ -1,5 +1,8 @@
 <?xml version="1.0" ?>
-
+<!--
+	The launch file of the robot model. 
+	used for visualization test.
+-->
 <launch>
 	<arg name="model" />
 	<!-- Parsing xacro and setting robot_description parameter -->

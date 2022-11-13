@@ -142,7 +142,7 @@ include_directories(
 # add_executable(iwb_state_publisher src/iwb_state_publisher.cpp)
 # target_link_libraries(iwb_state_publisher ${catkin_LIBRARIES})
 
-catkin_install_python(PROGRAMS script/iwb_state_publisher.py
+catkin_install_python(PROGRAMS script/iwb_state_publisher_backup.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

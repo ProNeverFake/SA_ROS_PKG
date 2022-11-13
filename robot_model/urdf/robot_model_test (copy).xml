@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
-
+<!--
+	A code block for test with several links and joints.
+-->
 <robot name="robot_model_test">
 
 	<link name="base_link_test">

@@ -1,4 +1,9 @@
 <?xml version="1.0"?>
+<!--
+	A backup.
+	This is the description file of the milling robot.
+
+-->
 <robot name="robot_model">
 
 	<link name="base_link">

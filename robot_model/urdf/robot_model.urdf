@@ -1,4 +1,8 @@
 <?xml version="1.0"?>
+<!--
+	the code in use.
+	This is the description file of the milling robot.
+-->
 <robot name="robot_model">
 
 	<link name="base_link">
@@ -25,9 +29,9 @@
 	<!-- =================================================================================== -->
 	<link name="link_0_x">
 		<visual name="mesh_0_x">
-			<origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+			<origin xyz="0.000 0.000 0.000" rpy=" 0.000 0.000 0.000" />
 			<geometry>
-				<mesh filename="package://robot_model/mesh/L0.obj" scale="1 1 1" />
+				<mesh filename="package://robot_model/mesh/tisch-und-base1.obj" scale="1 1 1" />
 			</geometry>
 			<material name="l0_mtr">
 				<texture filename="package://robot_model/mesh/texture/L0.png" />

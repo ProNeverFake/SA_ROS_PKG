@@ -1,5 +1,8 @@
 #!/usr/bin/env python
-
+'''
+    the python script run by the bash script to start iwb state publisher.
+    
+'''
 
 
 # the python pkg for ros functionalities

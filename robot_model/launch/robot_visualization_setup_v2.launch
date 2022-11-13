@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
-
+<!--
+	The launch file of the robot model. with fake controller v.2
+-->
 <launch>
 	<arg name="model" />
 	<!-- Parsing xacro and setting robot_description parameter -->

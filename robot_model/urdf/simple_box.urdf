@@ -1,24 +1,45 @@
+<!-- a simple test of gazebo functions -->
+
 <robot name="simple_box">
-    <link name="my_box">
-      <inertial>
-        <origin xyz="2 0 0" />
-        <mass value="1.0" />
-        <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
-      </inertial>
-      <visual>
-        <origin xyz="2 0 1"/>
-        <geometry>
-          <box size="1 1 2" />
-        </geometry>
-      </visual>
-      <collision>
-        <origin xyz="2 0 1"/>
-        <geometry>
-          <box size="1 1 2" />
-        </geometry>
-      </collision>
-    </link>
-    <gazebo reference="my_box">
-      <material>Gazebo/Blue</material>
-    </gazebo>
-  </robot>
+  <link name="base_link">
+    <visual>
+      <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+      <geometry>
+        <cylinder length="0.01" radius="0.2" />
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="joint_0" type="fixed">
+		<!-- <movement type="weld" rigidity = "flexible"/> -->
+		<parent link="base_link" />
+		<child link="my_box" />
+		<origin rpy="0 0 0" xyz="0 0 0" />
+		<!-- <T_Parent_Joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/>
+		<T_Child_Joint xyz = "0.0000 0.0000 0.0000" rpy = "0.0000 0.0000 0.0000"/> -->
+	</joint>
+
+
+
+
+  <link name="my_box">    
+    <visual>
+      <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+      <geometry>
+        <!-- <mesh filename = "L6Spindle.obj" scale = "1.0"/> -->
+        <mesh filename="package://robot_model/mesh/L0.obj" scale="1 1 1" />
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0.000 0.000 0.000" rpy=" 0.0000 0.000 0.000" />
+      <geometry>
+        <!-- <mesh filename = "L6Spindle.obj" scale = "1.0"/> -->
+        <mesh filename="package://robot_model/mesh/L0.obj" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="my_box">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+</robot>

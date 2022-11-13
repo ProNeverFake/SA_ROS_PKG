@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
-
+<!--
+	This is the description file of the milling robot.
+	Used for test in gazebo.
+-->
 <robot name="robot_model_gazebo_test">
 	<link name="world" />
 

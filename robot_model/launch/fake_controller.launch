@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
-
+<!--
+	A independent launch file for the launch of the fake controller.
+-->
 <launch>
 		
 	<node name="iwb_fake_controller" pkg="fake_controller" type="fake_controller.py"/>

@@ -1,5 +1,9 @@
 <?xml version="1.0" ?>
-
+<!--
+	The code in use.
+	The launch file of the robot model.
+	The joint state publisher listens to the iwb_joint_publisher node.
+-->
 <launch>
 	<arg name="model" />
 	<!-- Parsing xacro and setting robot_description parameter -->

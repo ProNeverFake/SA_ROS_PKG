@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
-
+<!--
+	The original code for visualization implementation.
+-->
 <launch>
 	<arg name="model" />
 	<!-- Parsing xacro and setting robot_description parameter -->

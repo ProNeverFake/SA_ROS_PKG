@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+'''
+    An example code block for development.
+    unfinished. Not complied by cmake.
+'''
 import sys
 
 # the python pkg for ros functionalities

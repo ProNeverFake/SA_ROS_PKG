@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!--
+	Visualize the simple box. As an example code block.
+-->
+<launch>
+	<arg name="model" />
+	<!-- Parsing xacro and setting robot_description parameter -->
+
+	<param name="robot_description" textfile="$(find robot_model)/urdf/simple_box.urdf" />
+
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+	<!-- <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" /> -->
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+	
+	<!-- Launch visualization in rviz -->
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot_model)/urdf.rviz" required="true" />
+
+</launch>

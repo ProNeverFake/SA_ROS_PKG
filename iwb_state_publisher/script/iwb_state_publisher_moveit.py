@@ -1,5 +1,9 @@
 #!/usr/bin/env python
-
+'''
+    the python script run by the bash script to start iwb state publisher with
+    motion plannning configs. Not in use yet.
+    
+'''
 # the python pkg for ros functionalities
 import sys
 import copy
